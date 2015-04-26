@@ -2,8 +2,8 @@
   "name": "search-based-angular-seed",
   "private": false,
   "version": "0.0.1",
-  "description": "",
-  "repository": "https://github.com/farolfo/hitchhike-GPS",
+  "description": "Seed project for angular apps for a search based (Google like) UI",
+  "repository": "https://github.com/farolfo/search-based-angular-seed",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.6.1",

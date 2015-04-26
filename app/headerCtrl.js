@@ -2,13 +2,7 @@
 
 angular.module('hitchhikeGPS.controllers')
 
-.controller('HeaderCtrl', ['$scope', '$modal', '$state', function($scope, $modal, $state) {
-    $scope.openHitchhikeModal = function() {
-        $modal.open({
-            templateUrl: 'addHitchhike/addHitchhike.modal.html',
-            controller: 'AddHitchhikeCtrl'
-        });
-    };
+.controller('HeaderCtrl', ['$scope', '$state', function($scope, $state) {
 
     $scope.$state = $state;
 }]);

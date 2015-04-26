@@ -23,27 +23,15 @@
   <nav class="navbar navbar-inverse header navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <div class="navbar-brand logo" ui-sref="home">
-          Hitchhike GPS
+          Your Project's brand
         </div>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="hidden-xs" ng-if="$state.is('hitchs')">
-            <button type="button" class="btn btn-success navbar-btn addHichhike" ng-click="openHitchhikeModal();">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              Add hitchhike!
-            </button>
-          </li>
           <li>
-            <a data-toggle="collapse" href="#howItWorks" aria-expanded="false" aria-controls="howItWorks">How it works?</a>
+            <a data-toggle="collapse" href="#someOption" aria-expanded="false" aria-controls="someOption">Some option</a>
           </li>
           <li>
             <a data-toggle="collapse" href="#aboutSection" aria-expanded="false" aria-controls="aboutSection">About</a>
@@ -65,14 +53,6 @@
 
   <div ui-view class="main-view"></div>
 
-  <div class="visible-xs text-center" ng-if="$state.is('hitchs')" id="bottomActions">
-    <button type="button" class="btn btn-success btn-lg addHichhike" ng-click="openHitchhikeModal();">
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      Add hitchhike!
-    </button>
-  </div>
-
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization,places&sensor=false"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -90,7 +70,5 @@
 
   <script src="headerCtrl.js"></script>
   <script src="home/homeCtrl.js"></script>
-  <script src="hitchs/hitchsCtrl.js"></script>
-  <script src="addHitchhike/addHitchhikeCtrl.js"></script>
 </body>
 </html>
