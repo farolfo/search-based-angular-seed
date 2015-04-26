@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="hitchhikeGPS" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hitchhike GPS</title>
+
+  <link rel="icon" type="image/png" href="img/logo-24x24.png"/>
+
+  <link href="app.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body ng-controller="HeaderCtrl">
+
+  <div id="alertPlaceholder"></div>
+
+  <nav class="navbar navbar-inverse header navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand logo" ui-sref="home">
+          Hitchhike GPS
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden-xs" ng-if="$state.is('hitchs')">
+            <button type="button" class="btn btn-success navbar-btn addHichhike" ng-click="openHitchhikeModal();">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add hitchhike!
+            </button>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#howItWorks" aria-expanded="false" aria-controls="howItWorks">How it works?</a>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#aboutSection" aria-expanded="false" aria-controls="aboutSection">About</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="collapse" id="aboutSection">
+    <div class="well text-center">
+      <h1>Hitchhike GPS</h1>
+      <p class="lead">Hitchhike-GPS is an opensource collaborative project.</p>
+      <p class="lead">When travelling and being carried doing hitchhike on the road, add it on the web app.
+
+        This way we can calculate the best places for a backapacker to hitchhike!</p>
+    </div>
+  </div>
+
+  <div ui-view class="main-view"></div>
+
+  <div class="visible-xs text-center" ng-if="$state.is('hitchs')" id="bottomActions">
+    <button type="button" class="btn btn-success btn-lg addHichhike" ng-click="openHitchhikeModal();">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      Add hitchhike!
+    </button>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=visualization,places&sensor=false"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="libs/ngAutocomplete.js"></script>
+
+  <script src="app.js"></script>
+
+  <script src="components/api/resources.js"></script>
+
+  <script src="headerCtrl.js"></script>
+  <script src="home/homeCtrl.js"></script>
+  <script src="hitchs/hitchsCtrl.js"></script>
+  <script src="addHitchhike/addHitchhikeCtrl.js"></script>
+</body>
+</html>

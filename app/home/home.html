@@ -1,0 +1,17 @@
+<div class="home-main">
+
+    <h1 class="brand-big text-center">
+        Hitchhike GPS
+    </h1>
+    <p class="brand-slogan text-center lead">Find out the hottest places to hitchike on the road!</p>
+
+    <div class="search-main row">
+        <form class="form-inline" ng-submit="search()">
+            <div class="form-group col-xs-10">
+                <input type="text" placeholder="Where are you?" class="form-control input-lg" ng-autocomplete="result.val" details="result.details" options="searchOptions"/>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg col-xs-2">Search</button>
+        </form>
+    </div>
+
+</div>

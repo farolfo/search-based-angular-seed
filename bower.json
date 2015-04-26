@@ -1,0 +1,17 @@
+{
+  "name": "Hitchhike GPS",
+  "description": "When travelling and being carried doing hitch on the road, mark it on the web app. This way we can calculate the bests roads and places for a backapacker to hitch!",
+  "version": "0.0.1",
+  "homepage": "http://farolfo.github.io/hitchhike-GPS",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-ui-router": "*",
+    "angular-resource": "*",
+    "underscore": "*",
+    "jquery": "*",
+    "bootstrap": "*",
+    "angular-bootstrap": "*"
+  }
+}
