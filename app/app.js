@@ -1,20 +1,20 @@
 'use strict';
 
-angular.module('hitchhikeGPS.controllers', []);
-angular.module('hitchhikeGPS.services', []);
-angular.module('hitchhikeGPS.directives', []);
+angular.module('myApp.controllers', []);
+angular.module('myApp.services', []);
+angular.module('myApp.directives', []);
 
-angular.module('hitchhikeGPS', [
+angular.module('myApp', [
   'ui.router',
   'ngResource',
   'ui.bootstrap',
-  'hitchhikeGPS.controllers',
-  'hitchhikeGPS.services',
-  'hitchhikeGPS.directives',
+  'myApp.controllers',
+  'myApp.services',
+  'myApp.directives',
   'ngAutocomplete'
 ]);
 
-angular.module('hitchhikeGPS').config(function ($urlRouterProvider, $stateProvider) {
+angular.module('myApp').config(function ($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.when('', '/home');
 
   $stateProvider
@@ -22,13 +22,7 @@ angular.module('hitchhikeGPS').config(function ($urlRouterProvider, $stateProvid
             url: '/home',
             templateUrl: 'home/home.html',
             controller: 'HomeCtrl'
-          })
-
-        .state('hitchs', {
-            url: '/hitchs?lat&long',
-            templateUrl: 'hitchs/hitchs.html',
-            controller: 'HitchsCtrl'
-        });
+          });
 })
 
 .run(function() {

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('hitchhikeGPS.services')
+angular.module('myApp.services')
 
-    .factory('hitchs', function ($resource) {
-        return $resource('https://mochilero-api.herokuapp.com/hitchs');
+    .factory('myAPI', function ($resource) {
+        return $resource('myAPIUrl');
     });

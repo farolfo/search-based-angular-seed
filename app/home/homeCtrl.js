@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hitchhikeGPS.controllers')
+angular.module('myApp.controllers')
 
 .controller('HomeCtrl', ['$scope', '$state', function($scope, $state) {
 
@@ -15,10 +15,12 @@ angular.module('hitchhikeGPS.controllers')
                 return;
             }
 
-            $state.go('hitchs', {
-                lat: $scope.result.details.geometry.location.k,
-                long: $scope.result.details.geometry.location.D
-            }, {inherit: false});
+            /* You could here navigate to a results view
+             * $state.go('results', {
+             *   lat: $scope.result.details.geometry.location.k,
+             *   long: $scope.result.details.geometry.location.D
+             * }, {inherit: false});
+             */
         };
 
 }]);

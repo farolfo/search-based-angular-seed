@@ -1,17 +1,23 @@
 <div class="home-main">
 
     <h1 class="brand-big text-center">
-        Hitchhike GPS
+        My App
     </h1>
-    <p class="brand-slogan text-center lead">Find out the hottest places to hitchike on the road!</p>
+    <p class="brand-slogan text-center lead">The template for a search based (Goolge like) web app</p>
 
     <div class="search-main row">
         <form class="form-inline" ng-submit="search()">
             <div class="form-group col-xs-10">
-                <input type="text" placeholder="Where are you?" class="form-control input-lg" ng-autocomplete="result.val" details="result.details" options="searchOptions"/>
+                <input type="text" placeholder="Try the autocomplete..." class="form-control input-lg" ng-autocomplete="result.val" details="result.details" options="searchOptions"/>
             </div>
             <button type="submit" class="btn btn-success btn-lg col-xs-2">Search</button>
         </form>
+    </div>
+
+    <div class="results-main" ng-if="result.val">
+      <div class="lead">
+        You picked {{result.val}}
+      </div>
     </div>
 
 </div>

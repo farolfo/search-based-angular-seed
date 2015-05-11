@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hitchhikeGPS.controllers')
+angular.module('myApp.controllers')
 
 .controller('HeaderCtrl', ['$scope', '$state', function($scope, $state) {
 
